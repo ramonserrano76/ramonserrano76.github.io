@@ -1,0 +1,31 @@
+<header>
+    <nav>        
+        <ul class="nav nav--hightlighted nav--sticky">
+            <li class="nav__brand"><a class="" href="./"><button tabindex="0"><img
+                            src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1666041412/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2817%29.png"
+                            width="250"></button></a><a class="rainbow_text_animated">
+                    <span>Ramón Serrano</span></a></li>
+            <li class="nav__item">
+                <a class="nav__link" aria-current="page" href="/login"><button class="" tabindex="1" (click)="login()"
+                        *ngIf="!isLogged">
+                        <img src="https://cdn.iconscout.com/icon/free/png-64/login-1440156-1214657.png" alt="sign-in"
+                            class="login__img"><span style="color:white">Sign in</span></button>
+                    
+                    <a *ngIf="isLogged">Bienvenido/a, {{getNombreUsuario()}}  </a>
+                    <button class="" tabindex="2" (click)="onLogOut()" *ngIf="isLogged"><img
+                            src="https://cdn.iconscout.com/icon/premium/png-64-thumb/logout-2-110783.png" alt="logout"
+                            class="login__img"><span style="color:white">Sign out</span></button></a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" aria-current="page" href="/login"><button class="" tabindex="0"><img
+                            src="https://cdn.iconscout.com/icon/premium/png-64-thumb/sign-up-4621286-3841288.png"
+                            alt="sign-up" class="login__img"><span style="color:white">Sign up</span></button></a>
+            </li>            
+            <li class="nav__item"><a style="color:white" (click)="scroll('about')" #about>About</a></li>
+            <li class="nav__item"><a style="color:white" (click)="scroll('skills')" #skills>Skills</a></li>
+            <li class="nav__item"><a style="color:white" (click)="scroll('projects')" #projects>Projects</a></li>
+            <li class="nav__item"><a style="color:white" (click)="scroll('contact')" #contact>Contact</a></li>            
+        </ul>
+        <div class="toggle"><i class="fas fa-2x fa-bars" data-bs-toggle="collapse"></i></div>
+    </nav>    
+</header>
